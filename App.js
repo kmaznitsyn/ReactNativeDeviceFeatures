@@ -8,8 +8,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import IconButton from "./components/UI/IconButton";
 import { Colors } from "./constants/colors";
 import Map from "./screens/Map";
-import { useEffect, useState } from "react";
-import AppLoading from "expo-app-loading";
 
 const Stack = createNativeStackNavigator();
 
