@@ -1,0 +1,37 @@
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { Colors } from "../../constants/colors";
+
+const Button = ({ onPress, children }) => {
+  return (
+    <Pressable
+      style={({ pressed }) => [styles.button, pressed && styles.pressed]}
+      onPress={onPress}
+    >
+      <Text style={styles.text}>{children}</Text>
+    </Pressable>
+  );
+};
+
+export default Button;
+
+const styles = StyleSheet.create({
+  button: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    margin: 6,
+    backgroundColor: Colors.primary700,
+    elevation: 2,
+    shadowColor: "black",
+    shadowOpacity: 0.15,
+    shadowRadius: 2,
+    borderRadius: 6,
+  },
+  pressed: {
+    opacity: 0.7,
+  },
+  text: {
+    textAlign: "center",
+    fontSize: 16,
+  },
+});
